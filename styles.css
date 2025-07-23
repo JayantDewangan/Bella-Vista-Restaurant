@@ -1,0 +1,667 @@
+@import url('https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container{
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header{
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 400px;
+    margin-bottom: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logo .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo .title h1{
+    font-size: 3rem;
+    font-family: "Winky Rough", sans-serif;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: bisque;
+}
+
+.logo .title span{
+    font-size: 1rem;
+    font-family: "Oswald", sans-serif;
+    margin-top: -15px;
+    color: rgb(142, 210, 212);
+    opacity: 0.8;
+}
+
+.logo img{
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.logo img:hover{
+    transform: scale(1.1);
+    transition: 0.4s ease-in-out;
+}
+
+.nav-links{
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
+    margin-right: -340px;
+}
+
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover{
+    background-color: rgba(255,255,255,0.1);
+}
+
+.cart-and-id{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-right: -100px;
+}
+
+.cart-and-id img{
+    width: 40px;
+    height: 40px;
+}
+
+.cart-and-id img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+}
+
+.hero{
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./background.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h2{
+    font-size: 3.5rem;
+    font-family: "Josefin Sans", sans-serif;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.hero-content span{
+    font-size: 4.5rem;
+    font-family: "Winky Rough", sans-serif;
+    color: bisque;
+    font-weight: 400;
+    text-shadow: 0px 0px 5px #e74c3c;
+}
+
+.hero-content p{
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    font-family: "Oswald", sans-serif;
+}
+
+.hero-buttons{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn{
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary{
+    background-color: #e74c3c;
+    color: white;
+    box-shadow: 0px 0px 6px #e74c3c;
+}
+
+.btn-primary:hover{
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+.btn-secondary{
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    box-shadow: 0px 0px 6px white;
+}
+
+.btn-secondary:hover{
+    background-color: white;
+    color: #2c3e50;
+}
+
+.menu{
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+}
+
+.menu-title{
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #3e5e7d;
+}
+
+.menu-desc{
+    text-align: center;
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 2.5rem;
+    margin-top: -1.5rem;
+}
+
+.menu-logo{
+    margin-left: 720px;
+    text-align: center;
+    height: 80px;
+    width: 80px;
+    cursor: pointer;
+}
+
+.menu-categories{
+    padding: 250px;
+    margin-top: -220px;
+}
+
+.menu-category{
+    margin-bottom: 3rem;
+}
+
+.menu-category h3{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    border-bottom: 3px solid #e74c3c;
+}
+
+.menu-items{
+    display: grid;
+    gap: 2rem;
+}
+
+.menu-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+    margin-top: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover{
+    transform: translateY(-3px);
+}
+
+.menu-item-info h4{
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+.menu-item-info p{
+    color: #666;
+    line-height: 1.4;
+}
+
+.prize{
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-left: 1rem;
+}
+
+.about{
+    background-color: #f8f9fa;
+}
+
+.about-container{
+    margin-top: -350px;
+    padding: 7rem;
+}
+
+.section-title{
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Josefin Sans", sans-serif;
+    color: #486077;
+}
+
+.about-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.about-image img{
+    width: 450px;
+    height: 350px;
+}
+
+.about-image{
+    width: 450px;
+    height: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.about-text{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 500px;
+    height: 300px;
+    margin-left: 90px;
+}
+
+.about-text h3{
+    font-size: 2rem;
+    font-family: "Josefin Sans", sans-serif;
+    margin-bottom: -15px;
+    color: #29669e;
+}
+
+.about-text p{
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+
+.contact{
+    background-color: #f8f9fa;
+}
+
+.section-title{
+    font-family: "Josefin Sans", sans-serif;
+    color: #24486a;
+}
+
+.contact .container{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.contact-content{
+    display: flex;
+    justify-content: center;
+    gap: 300px;
+}
+
+.contact-content .contact-info{
+    margin-left: -230px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-content .contact-info h3{
+    font-size: 2rem;
+    font-family: "Josefin Sans", sans-serif;
+    color: #29669e;
+}
+
+.contact-item .para-1{
+    color: #233444;
+    font-size: 20px;
+    font-weight: 650;
+    font-family: "Josefin Sans", sans-serif;
+    margin-bottom: 5px;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-form h3{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2rem;
+    color: #29669e;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 10rem
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label{
+    color: #233444;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 650;
+}
+
+.form-group input, 
+.form-group select,
+.form-group textarea{
+    width: 400px;
+    height: 40px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 15px;
+}
+
+.form-group textarea{
+    height: 120px;
+}
+
+form button{
+    width: 200px;
+    height: 50px;
+    font-family: "Roboto Condensed", sans-serif;
+    letter-spacing: 1px;
+    font-size: 16px;
+    color: white;
+    background-color: #e74c3c;
+    border: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover{
+    transform: translateY(-1px);
+    transition: 0.2s ease-in-out;
+    background-color: #fc5e4c;
+}
+
+.form-group input:focus ,
+.form-group select:focus ,
+.form-group textarea:focus {
+    outline: none;
+    border: 2px solid var(--primary-color);
+}
+
+
+/* This is CSS custom variables that we can use instead of individually defining it.
+Right now I am not changing the above code, but just above you can see that how to use these variables! */
+:root{
+    --primary-color: #e74c3c;
+    --secondary-color: #2c3e50;
+    --accent-color: #3498db;
+    --light-bg: #f8f9fa;
+    --dark-text: #333;
+    --light-text: #666;
+    --border-radius: 8px;
+    --shadow: 0 4px 15px rgba(0,0,0,0.1);
+    --transition: all 0.3s ease;
+}
+
+
+
+/* MAKING THE WEBSITE RESPONIVE :  */
+@media(width<1463px){
+    .navbar{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .cart-and-id{
+        display: none;
+    }
+    .nav-links{
+        margin-left: -300px;
+    }
+    .nav-links li a{
+        font-size: 25px;
+    }
+    .menu-logo{
+        display: none;
+    }
+}
+
+@media(width<1263px){
+    .hero-content h2{
+        font-size: 2.5rem;
+    }
+    .hero-content span{
+        font-size: 3.5rem;
+    }
+    .menu-logo{
+        display: none;
+    }
+    .menu-categories{
+        padding: 50px;
+        margin-top: -220px;
+    }
+    .menu-category{
+        margin-top: 170px;
+    }
+    #pasta{
+        margin-top: -1px;
+    }
+    #main{
+        margin-top: -1px;
+    }
+    #drinks{
+        margin-top: -1px;
+    }
+    #desserts{
+        margin-top: -1px;
+        margin-bottom: 200px;
+    }
+    .about{
+        height: 900px;
+    }
+    .about-container{
+        text-align: center;
+        margin-left: -100px;
+    }
+    
+    .about-content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-title{
+        margin-left: 100px;
+        font-size: 3rem;
+    }
+    .about-image{
+        margin-left: 100px;
+    }
+    .contact .container{
+        margin-top: 100px;
+    }
+    .contact-content{
+        flex-direction: column;
+        margin-left: 80px;
+    }
+    .contact-info{
+        padding: 230px;
+        margin-top: -230px;
+    }
+    .contact-form{
+        margin-top: -420px;
+    }
+}
+
+@keyframes fadeInUp{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft{
+    from{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero-content{
+    animation: fadeInUp 1s ease-in-out;
+}
+.about-image{
+    animation: fadeInUp 0.8s ease-in-out 0.3s both;
+}
+
+.section-title{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.section-title.animate{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footer{
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 3rem 0 1rem;
+    margin-top: 5rem;
+}
+
+.footer-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); /*This line adds an automatic responsiveness to the footer section, no need to seperately use media queries!!
+    auto-fit means fit as many columns as you can but note that each of them must be of 250px*/
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3{
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.footer-section ul{
+    list-style: none;
+}
+
+.footer-section ul li{
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a{
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-section a:hover{
+    color: var(--primary-color);
+}
+
+.social-links{
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link{
+    padding: 0.5rem 1rem;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+.social-link:hover{
+    background-color: rgba(222, 214, 214, 0.785);
+    color: white;
+}
+
+.footer-bottom{
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #34495e;
+    color: #bdc3c7;
+}
